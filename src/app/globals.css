@@ -1,26 +1,151 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --radius: 1rem;
+  --background: #fffdf7;
   --foreground: #171717;
-}
+  --card: #fffdf7;
+  --card-foreground: #171717;
+  --popover: #fffdf7;
+  --popover-foreground: #171717;
+  --primary: #2ea58c;
+  --primary-foreground: #fffdf7;
+  --secondary: #e6fff5;
+  --secondary-foreground: #171717;
+  --muted: #e6fff5;
+  --muted-foreground: #3a3a3a;
+  --accent: #b8f1d6;
+  --accent-foreground: #171717;
+  --accent-muted: #e6fff5;
+  --destructive: #cc3300;
+  --border: #eeeae2;
+  --input: #eeeae2;
+  --ring: #ccc2b5;
+  --chart-1: #aaccc0;
+  --chart-2: #98c7b2;
+  --chart-3: #7ec9ad;
+  --chart-4: #cff7e9;
+  --chart-5: #e3fdf3;
+  --sidebar: #fdfcf8;
+  --sidebar-foreground: #171717;
+  --sidebar-primary: #b8f1d6;
+  --sidebar-primary-foreground: #fffdf7;
+  --sidebar-accent: #b8f1d6;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #eeeae2;
+  --sidebar-ring: #ccc2b5;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --font-body: "IBM Plex Mono", monospace;
+  --font-title: "VT323", monospace;
 
-@theme inline {
+  /* theming */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-title);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-base: var(--border-radius);
+  --shadow-base: var(--shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #171717;
+  --card-foreground: #ededed;
+  --popover: #171717;
+  --popover-foreground: #ededed;
+  --primary: #b8f1d6;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a2a2a;
+  --secondary-foreground: #ededed;
+  --muted: #1a2a2a;
+  --muted-foreground: #88eac5;
+  --accent: #1a2a2a;
+  --accent-foreground: #ededed;
+  --accent-muted: #0f1a18;
+  --destructive: #ff6644;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #88eac5;
+  --chart-1: #2ea58c;
+  --chart-2: #42b598;
+  --chart-3: #88eac5;
+  --chart-4: #3eada0;
+  --chart-5: #58bca8;
+  --sidebar: #171717;
+  --sidebar-foreground: #ededed;
+  --sidebar-primary: #2ea58c;
+  --sidebar-primary-foreground: #ededed;
+  --sidebar-accent: #1a2a2a;
+  --sidebar-accent-foreground: #ededed;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #88eac5;
+  --shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes ping-slow {
+  75%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
