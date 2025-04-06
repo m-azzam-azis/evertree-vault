@@ -78,7 +78,7 @@ const Header = () => {
             </button>
 
             <Link
-              href={"https://icp.ninja/s/zDQRK"}
+              href={"/demo"}
               target="_blank"
               className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity cursor-pointer"
             >
