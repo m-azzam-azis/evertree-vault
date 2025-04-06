@@ -10,7 +10,7 @@ export default function Novelty() {
       title: "Native Canister Memory",
       description:
         "Utilizing ICP's orthogonal persistence for truly immutable, distributed storage",
-      year: "2023",
+      year: "2025",
       color: "rgb(136, 234, 197)",
       icon: <LuZap className="w-5 h-5" />,
     },
@@ -18,7 +18,7 @@ export default function Novelty() {
       title: "Autonomous Knowledge Curation",
       description:
         "Self-updating AI systems that grow and refine information without human bias",
-      year: "2024",
+      year: "2025",
       color: "rgb(152, 199, 178)",
       icon: <LuZap className="w-5 h-5" />,
     },
@@ -26,7 +26,7 @@ export default function Novelty() {
       title: "Decentralized Reputation System",
       description:
         "Transparent verification through distributed consensus, not central authority",
-      year: "2024",
+      year: "2026",
       color: "rgb(126, 201, 173)",
       icon: <LuZap className="w-5 h-5" />,
     },
@@ -34,7 +34,7 @@ export default function Novelty() {
       title: "Composable Agent Networks",
       description:
         "Multiple specialized AI agents working in concert to validate and structure information",
-      year: "2025",
+      year: "2027",
       color: "rgb(170, 204, 192)",
       icon: <LuZap className="w-5 h-5" />,
     },
