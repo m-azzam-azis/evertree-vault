@@ -96,7 +96,7 @@ export function ScrollControls({
     <>
       {children}
 
-      <div className="left-6 top-1/2 transform -translate-y-1/2 z-50 lg:flex flex-col gap-3 px-2 ml-4 hidden lg:fixed">
+      <div className="-right-1 top-1/2 transform -translate-y-1/2 z-50 lg:flex flex-col gap-3 px-2 ml-4 hidden lg:fixed">
         {indicators.map((indicator) => (
           <div
             key={indicator.index}

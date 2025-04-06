@@ -6,6 +6,7 @@ import { LuLeaf } from "react-icons/lu";
 import { useTheme } from "next-themes";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,12 +78,9 @@ const Header = () => {
               )}
             </button>
 
-            <Link
-              href="/login"
-              className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
-            >
-              Try Now
-            </Link>
+            <Button className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity cursor-pointer">
+              Login
+            </Button>
           </div>
         </div>
       </div>
