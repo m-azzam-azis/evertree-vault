@@ -103,14 +103,14 @@ export default function Hero() {
               target="_blank"
               className="px-8 py-3 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-all transform hover:translate-1.5"
             >
-              Explore the Vault
+              Try Demo (non ICP)
             </Link>
             <Link
-              href="/demo"
+              href="https://icp.ninja/s/G934N"
               target="_blank"
               className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground hover:bg-accent transition-all transform hover:translate-1.5"
             >
-              Contribute Knowledge
+              Try Demo (ICP)
             </Link>
           </motion.div>
         </motion.div>

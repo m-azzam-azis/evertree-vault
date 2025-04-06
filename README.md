@@ -77,7 +77,7 @@ We welcome contributions from developers, researchers, and advocates passionate 
 
 To contribute:
 
-- **ICP Ninja:** https://icp.ninja/s/zDQRK
+- **ICP Ninja Project:** https://icp.ninja/s/G934N
 - **GH Repo:** https://github.com/m-azzam-azis/evertree-vault
 
 ---
