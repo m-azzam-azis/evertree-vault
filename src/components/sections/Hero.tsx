@@ -99,13 +99,15 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
-              href="/explore"
+              href="https://icp.ninja/s/zDQRK"
+              target="_blank"
               className="px-8 py-3 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-all transform hover:translate-1.5"
             >
               Explore the Vault
             </Link>
             <Link
-              href="/contribute"
+              href="https://icp.ninja/s/zDQRK"
+              target="_blank"
               className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground hover:bg-accent transition-all transform hover:translate-1.5"
             >
               Contribute Knowledge

@@ -6,7 +6,6 @@ import { LuLeaf } from "react-icons/lu";
 import { useTheme } from "next-themes";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -78,9 +77,13 @@ const Header = () => {
               )}
             </button>
 
-            <Button className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity cursor-pointer">
-              Login
-            </Button>
+            <Link
+              href={"https://icp.ninja/s/zDQRK"}
+              target="_blank"
+              className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity cursor-pointer"
+            >
+              Try Our App
+            </Link>
           </div>
         </div>
       </div>
