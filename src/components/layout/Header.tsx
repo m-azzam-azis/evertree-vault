@@ -48,7 +48,8 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-4 md:gap-8">
             <Link
-              href="/Source"
+              href="https://github.com/m-azzam-azis/evertree-vault"
+              target="_blank"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Code

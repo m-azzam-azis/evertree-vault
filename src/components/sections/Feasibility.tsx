@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import { LuWrench } from "react-icons/lu";
 
 export default function Feasibility() {
   const feasibilityPoints = [
@@ -36,7 +37,12 @@ export default function Feasibility() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold mb-8">Technical Feasibility</h2>
+        <h2 className="text-3xl font-bold mb-8 flex items-center">
+          <span className="bg-primary/10 p-2 rounded-full mr-3">
+            <LuWrench className="w-6 h-6 text-primary" />
+          </span>
+          Technical Feasibility
+        </h2>
 
         <Card className="rounded-2xl shadow-soft-md hover:shadow-soft-lg transition-shadow duration-300">
           <CardContent className="p-8">

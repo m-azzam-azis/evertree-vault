@@ -22,7 +22,10 @@ export default function Home() {
       <Hero />
 
       <div ref={containerRef}>
-        <ScrollControls containerRef={containerRef} totalSections={numSections}>
+        <ScrollControls
+          containerRef={containerRef as React.RefObject<HTMLDivElement>}
+          totalSections={numSections}
+        >
           {/* Problem Section */}
           <section className=" w-full min-h-screen flex items-center overflow-hidden bg-background">
             <div className="container mx-auto px-6">

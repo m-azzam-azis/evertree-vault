@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { LuLightbulb, LuZap } from "react-icons/lu";
 
 export default function Novelty() {
   const noveltyPoints = [
@@ -11,24 +11,32 @@ export default function Novelty() {
       description:
         "Utilizing ICP's orthogonal persistence for truly immutable, distributed storage",
       year: "2023",
+      color: "rgb(136, 234, 197)",
+      icon: <LuZap className="w-5 h-5" />,
     },
     {
       title: "Autonomous Knowledge Curation",
       description:
         "Self-updating AI systems that grow and refine information without human bias",
       year: "2024",
+      color: "rgb(152, 199, 178)",
+      icon: <LuZap className="w-5 h-5" />,
     },
     {
       title: "Decentralized Reputation System",
       description:
         "Transparent verification through distributed consensus, not central authority",
       year: "2024",
+      color: "rgb(126, 201, 173)",
+      icon: <LuZap className="w-5 h-5" />,
     },
     {
       title: "Composable Agent Networks",
       description:
         "Multiple specialized AI agents working in concert to validate and structure information",
       year: "2025",
+      color: "rgb(170, 204, 192)",
+      icon: <LuZap className="w-5 h-5" />,
     },
   ];
 
@@ -55,7 +63,12 @@ export default function Novelty() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold mb-8 ">What Makes Us Unique</h2>
+        <h2 className="text-3xl font-bold mb-8 flex items-center">
+          <span className="bg-primary/10 p-2 rounded-full mr-3">
+            <LuLightbulb className="w-6 h-6 text-primary" />
+          </span>
+          Innovation Roadmap
+        </h2>
 
         <Card className="rounded-2xl shadow-soft-md hover:shadow-soft-lg transition-shadow duration-300">
           <CardContent className="p-8">
@@ -72,35 +85,64 @@ export default function Novelty() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              {/* Timeline line */}
-              <div className="absolute left-16 top-0 bottom-0 w-0.5 bg-primary/30" />
+              {/* Timeline line with gradient */}
+              <div className="absolute left-16 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-accent to-primary/30 rounded-full" />
 
               {/* Timeline items */}
               {noveltyPoints.map((point, index) => (
                 <motion.div
                   key={index}
                   variants={item}
-                  className="flex mb-12 last:mb-0 relative"
+                  className="flex mb-12 last:mb-0 relative group"
                 >
                   {/* Year marker */}
-                  <div className="w-32 flex-shrink-0 text-right pl-6  font-mono font-bold">
+                  <div className="w-32 flex-shrink-0 text-right pr-6 font-mono font-bold text-primary group-hover:scale-110 transition-transform translate-x-6 text-xl">
                     {point.year}
                   </div>
 
-                  {/* Timeline dot */}
-                  <div className="absolute left-16 transform -translate-x-1/2  w-4 h-4 rounded-full bg-primary border-4 border-background" />
+                  {/* Timeline dot with pulse effect */}
+                  <div className="absolute left-16 transform -translate-x-[10px] flex items-center justify-center">
+                    <div
+                      className="w-6 h-6 rounded-full bg-background border-2"
+                      style={{ borderColor: point.color }}
+                    />
+                    <div
+                      className="absolute w-3 h-3 rounded-full"
+                      style={{ backgroundColor: point.color }}
+                    />
+                    <div
+                      className="absolute w-8 h-8 rounded-full animate-ping-slow opacity-30"
+                      style={{ backgroundColor: point.color }}
+                    />
+                  </div>
 
                   {/* Content */}
-                  <div className="pl-8">
+                  <div
+                    className="pl-8 rounded-lg transition-all"
+                    style={{ backgroundColor: `${point.color}08` }}
+                  >
                     <h3 className="text-xl font-bold mb-2 flex items-center">
+                      <span
+                        className=" rounded-md mr-2"
+                        style={{ backgroundColor: `${point.color}30` }}
+                      >
+                        {point.icon}
+                      </span>
                       {point.title}
-                      <ArrowRight className="ml-2 w-4 h-4 text-primary" />
                     </h3>
                     <p className="text-foreground/80">{point.description}</p>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* Future indicator */}
+            <div className="flex items-center justify-center mt-8">
+              <div className="px-4 py-2 rounded-full text-sm bg-primary/10 border border-primary/30 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>Continuous innovation pipeline</span>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </motion.div>

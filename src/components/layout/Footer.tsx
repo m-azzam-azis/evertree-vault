@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               {/* LinkedIn link */}
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/m-azzam-azis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full hover:bg-primary/20 transition-colors"
@@ -37,7 +37,7 @@ export default function Footer() {
 
               {/* GitHub link */}
               <a
-                href="https://github.com"
+                href="https://github.com/m-azzam-azis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full hover:bg-primary/20 transition-colors"

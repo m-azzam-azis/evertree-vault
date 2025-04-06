@@ -87,18 +87,18 @@ export default function ProfilePage() {
             <div className="h-[40rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
               <div className="w-full absolute inset-0 h-screen">
                 <SparklesCore
-                  id="tsparticlesfullpage"
-                  background="transparent"
+                  id="tsparticlesfullpage-dark"
+                  background="white"
                   minSize={0.6}
                   maxSize={1.4}
-                  particleDensity={100}
+                  particleDensity={60}
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                 />
               </div>
               <motion.h1
                 variants={itemVariants}
-                className="text-4xl md:text-6xl font-bold mb-4"
+                className="text-4xl md:text-6xl font-bold mb-4 not-dark:text-white"
               >
                 Hi, I&apos;m{" "}
                 <span className="text-primary underline underline-offset-4">
@@ -110,14 +110,14 @@ export default function ProfilePage() {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-muted-foreground not-dark:text-green-900 mb-8 max-w-2xl mx-auto"
           >
             CS Student • Developer • Vibe Coder
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-4 justify-center"
+            className="flex flex-wrap gap-4 justify-center not-dark:text-green-900"
           >
             <Link
               href="https://linkedin.com/in/m-azzam-azis"
@@ -152,7 +152,7 @@ export default function ProfilePage() {
 
       {/* About Section */}
       <TracingBeam className="px-6">
-        <div className="max-w-3xl mx-auto py-24">
+        <div className="max-w-3xl mx-auto py-12">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
