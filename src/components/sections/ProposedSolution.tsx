@@ -7,13 +7,10 @@ import {
   LuCheckCheck,
   LuQuote,
   LuArrowRight,
-
   LuCoins,
   LuFileSearch,
-
   LuDatabase,
   LuBrain,
-
   LuShield,
 } from "react-icons/lu";
 
@@ -312,13 +309,15 @@ export default function ProposedSolution() {
                   viewport={{ once: true }}
                 >
                   <q className="text-lg md:text-xl font-medium italic mb-6 leading-relaxed">
-                    Those who control the present, control the past and those
-                    who control the past control the future.
+                    Those who who fail to learn from history, are doomed to
+                    repeat it
                   </q>
 
                   <div className="flex items-center justify-end">
                     <div className="w-8 h-[1px] bg-primary/30 mr-3" />
-                    <p className="text-foreground/60 text-sm">George Orwell</p>
+                    <p className="text-foreground/60 text-sm">
+                      Winston Churchill
+                    </p>
                   </div>
                 </motion.div>
               </CardContent>
